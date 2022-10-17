@@ -1,4 +1,11 @@
 class main {
+    public static void main(String args[])
+    {
+        main ob = new main();
+        int arr[] = { 69, 2, 102, 67, 44, 11, 420 };
+        ob.bubbleSort(arr);
+        ob.printArray(arr);
+    }
     void bubbleSort(int arr[])
     {
         int n = arr.length;
@@ -12,7 +19,6 @@ class main {
                 }
     }
 
-    /* Prints the array */
     void printArray(int arr[])
     {
         int n = arr.length;
@@ -21,13 +27,5 @@ class main {
         System.out.println();
     }
 
-    // Driver method to test above
-    public static void main(String args[])
-    {
-        main ob = new main();
-        int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
-        ob.bubbleSort(arr);
-        System.out.println("Sorted array");
-        ob.printArray(arr);
-    }
+
 }
