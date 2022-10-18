@@ -3,12 +3,13 @@ package ErstesOO;
 public class Car {
     // Instanz / Gedächtnisvariablen
 
-    // dont do that later
+    // don't do that later
 
-    private int fuelConsumption;
+    public int fuelConsumption;
     public int fuelAmount;
     public String brand;
     public String serialNumber;
+    public int amountOfHonk;
     private String color;
 
     //Methode
@@ -17,6 +18,7 @@ public class Car {
         System.out.println("I am driving");
 
     }
+
     public void brake(){
         System.out.println("Ich bremse");
     }
@@ -30,11 +32,16 @@ public class Car {
         }
     }
 
-    public int getFuelConsumption(int i) {
-        return fuelConsumption;
+    public void honk() {
+        int amountOfReceptions;
+        for (amountOfReceptions = 0; amountOfReceptions < amountOfHonk; amountOfReceptions++) {
+            System.out.print("Tuuut ");
+        }
     }
 
-    public void setFuelConsumption(int fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
+
+    public void getRemainingRange(){
+
     }
 }
+

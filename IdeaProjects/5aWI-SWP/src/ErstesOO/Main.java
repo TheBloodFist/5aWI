@@ -7,20 +7,25 @@ public class Main {
         Car c1 = new Car();
         c1.brand = "Audi";
         c1.fuelAmount = 20;
-        c1.getFuelConsumption(7);
+        c1.fuelConsumption = 7;
         c1.serialNumber = "A1234";
+        c1.amountOfHonk = 5;
 
         Car c2 = new Car();
         c2.brand = "BMW";
         c2.fuelAmount = 6;
-        c2.getFuelConsumption(5);
+        c2.fuelConsumption= 5;
         c2.serialNumber = "better";
+        c2.amountOfHonk = 5;
+
 
         System.out.println(c2.fuelAmount);
         c2.drive();
         System.out.println(c2.fuelAmount);
         c2.brake();
         c2.turboBoost();
+        c2.honk();
+
 
 
 
