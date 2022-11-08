@@ -10,7 +10,16 @@ public class Car {
     public String brand;
     public String serialNumber;
     public int amountOfHonk;
+    public int amountOfReceptions;
     private String color;
+
+    //Konstruktor
+    public Car(int fuelConsumption, String brand, String serialNumber){
+        this.fuelConsumption = fuelConsumption;
+        this.brand = brand;
+        this.serialNumber = serialNumber;
+    }
+
 
     //Methode
     public void drive(){
@@ -33,15 +42,12 @@ public class Car {
     }
 
     public void honk() {
-        int amountOfReceptions;
         for (amountOfReceptions = 0; amountOfReceptions < amountOfHonk; amountOfReceptions++) {
             System.out.print("Tuuut ");
         }
     }
 
 
-    public void getRemainingRange(){
 
-    }
 }
 

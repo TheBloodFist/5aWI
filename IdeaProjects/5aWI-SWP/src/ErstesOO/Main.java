@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args){
         int a =7;
 
+        /*
         Car c1 = new Car();
         c1.brand = "Audi";
         c1.fuelAmount = 20;
@@ -17,17 +18,21 @@ public class Main {
         c2.fuelConsumption= 5;
         c2.serialNumber = "better";
         c2.amountOfHonk = 5;
+         */
+
+        Car c3 = new Car( 17, "Opel", "12340");
 
 
+        System.out.println(c3.serialNumber);
+
+    /*
         System.out.println(c2.fuelAmount);
         c2.drive();
         System.out.println(c2.fuelAmount);
         c2.brake();
         c2.turboBoost();
         c2.honk();
-
-
-
+    */
 
 
 
