@@ -5,32 +5,44 @@ public class Car {
 
     // don't do that later
 
-    public int fuelConsumption;
-    public int fuelAmount;
-    public String brand;
-    public String serialNumber;
-    public int amountOfHonk;
-    public int amountOfReceptions;
+    private int fuelConsumption;
+    private int fuelAmount;
+    private String brand;
+    private String serialNumber;
+    private int amountOfHonk;
+    private int amountOfReceptions;
     private String color;
+    private int speed = 100;
+    private String engine;
 
     //Konstruktor
-    public Car(int fuelConsumption, String brand, String serialNumber){
+    public Car(int fuelConsumption, int fuelAmount, String brand, String serialNumber, String engine){
         this.fuelConsumption = fuelConsumption;
+        this.fuelAmount = fuelAmount;
         this.brand = brand;
         this.serialNumber = serialNumber;
+        this.engine = engine;
     }
 
 
     //Methode
     public void drive(){
-        this.fuelAmount = this.fuelAmount - fuelConsumption;
+        this.fuelAmount = this.fuelAmount - this.fuelConsumption;
         System.out.println("I am driving");
+
+        if (speed == 100){
+            System.out.println("Vollgas (100)");
+        }
+        if (speed == 1){
+            System.out.println("Langsam (1)");
+        }
 
     }
 
     public void brake(){
         System.out.println("Ich bremse");
     }
+
 
     public void turboBoost(){
         if (fuelAmount*0.1 > (fuelAmount - fuelConsumption)){
@@ -48,6 +60,25 @@ public class Car {
     }
 
 
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getEngine() {
+        return engine;
+    }
 }
 

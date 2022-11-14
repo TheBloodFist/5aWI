@@ -20,10 +20,13 @@ public class Main {
         c2.amountOfHonk = 5;
          */
 
-        Car c3 = new Car( 17, "Opel", "12340");
+        Car c3 = new Car( 17, 20, "opel", "12340", "6 Zylinder");
 
 
-        System.out.println(c3.serialNumber);
+        System.out.println(c3.getSerialNumber());
+        System.out.println(c3.getEngine());
+        System.out.println(c3.getFuelAmount());
+        c3.drive();
 
     /*
         System.out.println(c2.fuelAmount);
@@ -33,6 +36,7 @@ public class Main {
         c2.turboBoost();
         c2.honk();
     */
+
 
 
 
