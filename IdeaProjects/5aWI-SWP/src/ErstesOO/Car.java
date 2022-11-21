@@ -1,9 +1,11 @@
 package ErstesOO;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Car {
     // Instanz / Gedächtnisvariablen
 
-    // don't do that later
+    // don't do that later (alles public machen)
 
     private int fuelConsumption;
     private int fuelAmount;
@@ -12,23 +14,59 @@ public class Car {
     private int amountOfHonk;
     private int amountOfReceptions;
     private String color;
-    private int speed = 100;
-    private String engine;
+    private List<RearMirror> mirrors;
+    private List<Engine> engines;
+    private List<Tire> tires;
+    private int speed;
 
     //Konstruktor
-    public Car(int fuelConsumption, int fuelAmount, String brand, String serialNumber, String engine){
+    public Car(int fuelConsumption, int fuelAmount, String brand, String serialNumber){
         this.fuelConsumption = fuelConsumption;
         this.fuelAmount = fuelAmount;
         this.brand = brand;
         this.serialNumber = serialNumber;
-        this.engine = engine;
+        this.mirrors = new ArrayList<>();
+        this.engines = new ArrayList<>();
+        this.tires = new ArrayList<>();
+    }
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
+    }
+
+    public List<Engine> getEngines() {
+        return engines;
+    }
+
+    public List<Tire> getTires() {
+        return tires;
+    }
+
+    public void addMirror (RearMirror rearMirror){
+
+        this.mirrors.add(rearMirror);
+    }
+
+    public void addEngine (Engine engine){
+
+        this.engines.add(engine);
+    }
+
+    public void addTire (Tire tire){
+
+        this.tires.add(tire);
     }
 
 
     //Methode
+    public void brake(){
+        System.out.println("Ich bremse");
+    }
+
+
+
     public void drive(){
-        this.fuelAmount = this.fuelAmount - this.fuelConsumption;
-        System.out.println("I am driving");
+        System.out.println("the motor is running with " + speed);
 
         if (speed == 100){
             System.out.println("Vollgas (100)");
@@ -38,11 +76,6 @@ public class Car {
         }
 
     }
-
-    public void brake(){
-        System.out.println("Ich bremse");
-    }
-
 
     public void turboBoost(){
         if (fuelAmount*0.1 > (fuelAmount - fuelConsumption)){
@@ -64,12 +97,21 @@ public class Car {
         return fuelAmount;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
     public String getSerialNumber() {
         return serialNumber;
     }
 
-    public String getEngine() {
-        return engine;
+
+    public String getColor() {
+        return color;
     }
+
+
+
+
 }
 
