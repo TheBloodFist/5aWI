@@ -64,17 +64,8 @@ public class Car {
         return fuelAmount;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
     public String getSerialNumber() {
         return serialNumber;
-    }
-
-
-    public String getColor() {
-        return color;
     }
 
     public String getEngine() {
