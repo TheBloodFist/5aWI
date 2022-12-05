@@ -15,5 +15,9 @@ public class Main {
 
         System.out.println(r1.getBattery().get(0).getChargingStatus());
 
+        r1.calculateStatus(b1.getChargingStatus(), b2.getChargingStatus());
+        r1.turnOn(b1.getChargingStatus(), b2.getChargingStatus());
+        r1.turnOff(b1.getChargingStatus(), b2.getChargingStatus());
     }
+
 }

@@ -11,6 +11,9 @@ public class Remote {
     private Color color;
     private int remoteSize;
     private List<Battery> batteries;
+    private int averageStatus;
+    private int decreaseStatus;
+
 
     public Remote(boolean hasPower, String brand, Color color, int remoteSize) {
         this.hasPower = hasPower;
@@ -21,6 +24,22 @@ public class Remote {
     }
 
 
+    public void calculateStatus(int b1, int b2){
+        averageStatus = (b1 + b2)/2;
+        System.out.println(averageStatus);
+    }
+
+    public void turnOn(int b1, int b2){
+        System.out.println("Verbraucher ist angeschlossen");
+        System.out.println(b1-5);
+        System.out.println(b2-5);
+    }
+
+    public void turnOff(int b1, int b2){
+        System.out.println("Verbraucher ist nicht angeschlossen");
+        System.out.println(b1);
+        System.out.println(b2);
+    }
 
     public void addBattery (Battery battery){
 
@@ -29,12 +48,7 @@ public class Remote {
 
 
 
-    public void getStatus(){
-
-    }
-
-
-    public boolean isHasPower() {
+    public boolean getHasPower() {
         return hasPower;
     }
 

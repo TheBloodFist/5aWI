@@ -9,6 +9,7 @@ public class Battery {
         this.batteryType = batteryType;
     }
 
+
     public int getChargingStatus() {
         return chargingStatus;
     }
@@ -16,6 +17,8 @@ public class Battery {
     public void setChargingStatus(int chargingStatus) {
         this.chargingStatus = chargingStatus;
     }
+
+
 
     public String getBatteryType() {
         return batteryType;
