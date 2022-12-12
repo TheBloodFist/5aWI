@@ -10,6 +10,7 @@ public class Battery {
     }
 
 
+
     public int getChargingStatus() {
         return chargingStatus;
     }
