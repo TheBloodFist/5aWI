@@ -10,5 +10,6 @@ public abstract class ASystem implements Observer {
         if (SunCollector.temp > 18) {
             System.out.println("ASystem: Die Momentane Spannung des SunCollectors beträgt " + SunCollector.temp + "V.");
         }
+
     }
 }
